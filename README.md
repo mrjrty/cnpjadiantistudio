@@ -1,38 +1,3 @@
-# cnpjrfb
-Sistema para Consultar os [Dados públicos CNPJ](https://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj) fornecidos pela Receita Federal do Brasil.
-
-## Vídeos no Youtube sobre
-
-*Apresentação rápida - Consultar os Dados públicos CNPJ fornecidos pela Receita Federal do Brasil*
-
-[![Apresentação rápida - Consultar os Dados públicos CNPJ fornecidos pela Receita Federal do Brasil](http://img.youtube.com/vi/jgnj-rcs5WE/0.jpg)](http://www.youtube.com/watch?v=jgnj-rcs5WE "Apresentação rápida - Consultar os Dados públicos CNPJ fornecidos pela Receita Federal do Brasil")
-
-*Detalhando as funções do cnpjrfb*
-
-[![Detalhando as funções do cnpjrfb](http://img.youtube.com/vi/p0vgvzox-BM/0.jpg)](http://www.youtube.com/watch?v=p0vgvzox-BM "Detalhando as funções do cnpjrfb")
-
-
-## Desktop
-Esse é um sistema foi feito com PHP usando o [Adianti FrameWork 7.1](https://www.adianti.com.br/framework) e [CNPJ-FULL do Fabio Serpa](https://github.com/fabioserpa/CNPJ-full).
-
-![Tela de Pesquisa Empresa](www/cnpjrfb/app/images/tela_pesquisa_empresa.png?raw=true "Tela de Pesquisa Empresa")
-
-![Tela de Pesquisa Socio](www/cnpjrfb/app/images/tela_pesquisa_socio.png?raw=true "Tela de Pesquisa Socio")
-
-## Celular
-![Visão no Celular](www/cnpjrfb/app/images/celular_empresa_visao.png?raw=true "Visão no Celular")
-
-![Visão no Celular menu CNAE](www/cnpjrfb/app/images/celular_empresa_pesquisa.png?raw=true "Visão no Celular menu CNAE")
-
-![Visão no Celular menu](www/cnpjrfb/app/images/celular_menu.png?raw=true "Visão no Celular menu")
-
-## Tablet
-
-![Visão no Tablet](www/cnpjrfb/app/images/tablet.png?raw=true "Visão no Tablet")
-
-# Instalando e rodando
-
-Você pode fazer a [instalação manual](#intalação-separada) etapa por etapa ou usar a [Intalação via Docker-compose](#intalação-via-docker-compose)
 
 ## Requistos
 * PHP 7.2 ou superior. Configura o PHP conforme orientações do [Adianti FrameWork 7.3.0](https://www.adianti.com.br/framework-quickstart)
@@ -65,20 +30,6 @@ Na primeira parte foi a instalação dos elementos básicos sem banco de dados c
 É algo demorado mesmo! Pois irá baixar 6 GB de dados da Receita Federal e depois criar o banco de dados completo.
 
 Baixar todos dados [Dados públicos CNPJ](https://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj) na pasta `<caminho servidor>/cnjrfb/app/CNPJ-full/downloads`
-
-Conforme orientação no [CNPJ-FULL do Fabio Serpa](https://github.com/fabioserpa/CNPJ-full#dados-p%C3%BAblicos-cnpj---convers%C3%A3o-para-csvsqlite-e-consultas)
-```
-ATENÇÃO!
-
-A partir de março de 2021, a Receita Federal mudou completamente a forma de disponibilizar os dados públicos do CNPJ. O script de carga deste repositório ainda não foi atualizado para refletir estas alterações, e portanto não funcionará para os novos arquivos disponibilizados a partir desta data.
-
-A boa notícia é que agora os arquivos já estão sendo disponibilizados pela RF em formato CSV, o que, dependendo do seu caso, pode até dispensar o uso deste script.
-
-Os scripts deste repositório no entanto ainda assim serão atualizados para manter funcional a conversão dos dados para formato SQLite, assim como os scripts de consulta.
-```
-
-1. [Converta os arquivos ZIP para Sqlite conforme, CNPJ Full](https://github.com/fabioserpa/CNPJ-full#convers%C3%A3o-para-csv-ou-sqlite) 
-1. Alterar o arquivo `<caminho servidor>/cnjrfb/app/config/cnpj_full.ini`. Altere o parâmetro de `name= "app/database/CNPJ_full.db"` para `name = "app/CNPJ-full/data/CNPJ_full.db"`
 
 
 ## Intalação via Docker-compose
